@@ -10,4 +10,4 @@ Understand you have limited time on this planet. Every minute you spend should o
 
 Build something that works for you. No need of approvals or appraisals. No permissions required. Just go on building. It will surely make you happy. 
 
-Define success. It's different for everyone. If your life is how you want it to be you are successful. And success is a journey, not some destination. 
+Define success. It's different for everyone. If your life is how you want it to be, you are successful. And success is a journey, not some destination. 
