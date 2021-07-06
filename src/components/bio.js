@@ -46,7 +46,7 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          Follow him
+          You should follow him:
           {` `}
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
             @hariravula
