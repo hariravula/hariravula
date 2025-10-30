@@ -185,9 +185,9 @@ This is expected with older Gatsby versions. See `SITE_ANALYSIS.md` for:
 - Update recommendations
 - Migration path to newer versions
 
-### Build Fails with Node.js 20
+### Build Fails with Node.js 17+
 
-The current codebase requires Node.js 16. See `.nvmrc` and `SITE_ANALYSIS.md` for details.
+The current codebase requires Node.js 16. Node.js 17 and later versions are incompatible due to OpenSSL changes. See `.nvmrc` and `SITE_ANALYSIS.md` for details.
 
 ## Contributing
 

@@ -62,9 +62,3 @@ jobs:
       - name: Check site status
         run: npm run check-status
         continue-on-error: true
-      
-      - name: Test site with curl
-        run: |
-          echo "Testing site availability..."
-          curl -I https://hari.io || echo "Site check failed"
-        continue-on-error: true
