@@ -1,0 +1,69 @@
+## Security Headers Configuration
+## This file configures security headers for the hari.io website when deployed on Netlify
+## These headers help protect against common web vulnerabilities
+
+/*
+  # Security Headers
+  
+  # Strict-Transport-Security (HSTS)
+  # Forces browsers to use HTTPS connections only
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # Content-Security-Policy (CSP)
+  # Helps prevent XSS attacks by controlling which resources can be loaded
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  
+  # X-Frame-Options
+  # Prevents clickjacking attacks by controlling if site can be embedded in frames
+  X-Frame-Options: DENY
+  
+  # X-Content-Type-Options
+  # Prevents MIME type sniffing
+  X-Content-Type-Options: nosniff
+  
+  # X-XSS-Protection
+  # Enables browser's XSS filtering (legacy, but still useful for older browsers)
+  X-XSS-Protection: 1; mode=block
+  
+  # Referrer-Policy
+  # Controls how much referrer information is shared
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions-Policy
+  # Controls which browser features can be used
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+  
+  # Cache-Control for HTML (don't cache HTML pages)
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Cache static assets with long expiration
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images with long expiration
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache JavaScript and CSS
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
