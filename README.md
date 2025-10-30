@@ -1,5 +1,32 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/89b46172-712b-46a8-9587-29b8cb8f17b7/deploy-status)](https://app.netlify.com/sites/hariravula-new/deploys)
 
+# Hari Ravula's Blog
+
+Personal blog built with Gatsby and deployed on Netlify.
+
+## 🔒 Security & Monitoring
+
+This repository includes comprehensive security and site monitoring tools:
+
+- **Site Status Checker**: Monitors availability, performance, and security headers
+- **Security Audit**: Analyzes dependencies for vulnerabilities
+- **Automated Monitoring**: GitHub Actions workflow for continuous monitoring
+
+### Quick Health Check
+
+```bash
+# Check site status and security
+npm run health-check
+
+# Individual checks
+npm run check-status      # Site availability and performance
+npm run security-audit    # Dependency vulnerability scan
+```
+
+📊 **See [SITE_ANALYSIS.md](SITE_ANALYSIS.md) for detailed security and performance analysis**
+
+---
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">

@@ -1,4 +1,5 @@
 const path = require(`path`)
+const fs = require(`fs`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -112,4 +113,15 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onPostBuild = () => {
+  // Copy _headers file to public directory for Netlify
+  const headersPath = path.join(__dirname, '_headers')
+  const publicHeadersPath = path.join(__dirname, 'public', '_headers')
+  
+  if (fs.existsSync(headersPath)) {
+    fs.copyFileSync(headersPath, publicHeadersPath)
+    console.log('✓ Copied _headers file to public directory')
+  }
 }

@@ -52,6 +52,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "check-status": "node scripts/check-site-status.js",
+    "security-audit": "node scripts/security-audit.js",
+    "health-check": "npm run security-audit && npm run check-status"
   }
 }
